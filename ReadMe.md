@@ -1,11 +1,4 @@
-## 项目打包步骤
+## jiaju-pc-web
 
-1. 修改文件`src/utils/common.js`为后台API接口地址
-```js
-// 测试
-// var api= 'https://test.ammsshop.com/admin-api'
-// 正式
-var api= 'https://www.ammsshop.com/admin-api'
-```
+家具-管理端前端代码
 
-2. 运行命令`npm run build:prod`
