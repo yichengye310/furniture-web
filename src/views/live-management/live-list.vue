@@ -179,7 +179,7 @@
       return {
         permission: [],
         listQuery: {
-          status: 0
+          // status: 0
         },
         listLoading: false,
         totalRecords: 0,
