@@ -236,8 +236,8 @@
           productLimitedTime.endTime=this.activity.endTime/1000
           productLimitedTime.discountWay=this.activity.discountWay
           productLimitedTime.activeObject=this.activity.activeObject
-          productLimitedTime.full=this.activity.full
-          productLimitedTime.reduce=this.activity.reduce
+          productLimitedTime.full=this.activity.full * 100
+          productLimitedTime.reduce=this.activity.reduce * 100
         })
 
         if(flag){
