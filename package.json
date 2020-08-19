@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
+    "deploy": "vue-cli-service build --mode production && cross-env NODE_ENV=production node ./deploy",
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
@@ -83,6 +84,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
+    "cross-env": "^5.2.0",
     "chalk": "2.4.2",
     "chokidar": "2.1.5",
     "connect": "3.6.6",
@@ -95,6 +97,7 @@
     "lint-staged": "8.1.5",
     "mockjs": "1.0.1-beta3",
     "node-sass": "^4.9.0",
+    "scp2": "^0.5.0",
     "plop": "2.3.0",
     "runjs": "^4.3.2",
     "sass-loader": "^7.3.1",
