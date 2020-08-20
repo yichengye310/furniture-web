@@ -281,7 +281,38 @@ export default {
   components: { UpdateImg, UpdateImgForStandards, Tinymce },
   data() {
     return {
-      imgs: imgDemo,
+      imgs: [
+        {
+          imageUrl: "",
+          id: 1,
+          uid: undefined,
+          imgType: 8,
+        },
+        {
+          imageUrl: "",
+          id: 2,
+          uid: undefined,
+          imgType: 9,
+        },
+        {
+          imageUrl: "",
+          id: 3,
+          uid: undefined,
+          imgType: 9,
+        },
+        {
+          imageUrl: "",
+          id: 4,
+          uid: undefined,
+          imgType: 9,
+        },
+        {
+          imageUrl: "",
+          id: 5,
+          uid: undefined,
+          imgType: 9,
+        },
+      ],
       content: ``,
       proID: undefined,
       standardList: [
@@ -301,7 +332,40 @@ export default {
           tradePrice: "",
         },
       ],
-      form: formTemp,
+      form: {
+        productCode: "",
+        status: 1,
+        startTime: undefined,
+        endTime: undefined,
+        limitNum: undefined,
+        personLimitNum: undefined,
+        discountWay: undefined,
+        full: undefined,
+        reduce: undefined,
+        activeObject: undefined,
+        productName: "",
+        productDescription: "",
+        activityImg: "",
+        productLimitedTimeDetail: { appDescription: "" },
+        commonImages: [],
+        productLimitedTimeStandardsDTOS: [
+          {
+            originalPrice: "",
+            discountPrice: "",
+            productLimitedTimeStandardsColour: [
+              {
+                tempId: "tempId" + new Date().getTime(),
+                colourImage: "",
+                colourName: "默认",
+                state: 1,
+              },
+            ],
+            standard: "",
+            state: 1,
+            tradePrice: "",
+          },
+        ],
+      },
     };
   },
   props: {
@@ -368,9 +432,9 @@ export default {
       console.log(
         "mounted:" + JSON.stringify(this.form.productLimitedTimeStandardsDTOS)
       );
-      this.form = formTemp;
+      // this.form = formTemp;
       this.form.commonImage = [];
-      this.imgs = imgDemo;
+      // this.imgs = imgDemo;
       this.standardList = this.form.productLimitedTimeStandardsDTOS;
     }
   },
@@ -499,7 +563,7 @@ export default {
           return false;
         }
         if (item.originalPrice != null && item.originalPrice != "") {
-          item.originalPrice = item.originalPrice * 100;
+          // item.originalPrice = item.originalPrice * 100;
         } else {
           this.$message({
             type: "danger",
@@ -510,7 +574,7 @@ export default {
         }
         if (this.discountWay == 2) {
           if (item.discountPrice != null && item.discountPrice != "") {
-            item.discountPrice = item.discountPrice * 100;
+            // item.discountPrice = item.discountPrice * 100;
           } else {
             this.$message({
               type: "danger",
@@ -522,7 +586,7 @@ export default {
         }
 
         if (item.tradePrice != null && item.tradePrice != "") {
-          item.tradePrice = item.tradePrice * 100;
+          // item.tradePrice = item.tradePrice * 100;
         } else {
           this.$message({
             type: "danger",
@@ -573,6 +637,19 @@ export default {
         form.productLimitedTimeStandardsDTOS.push(productStandardsDTO);
       });
       if (flag) {
+        this.form.productLimitedTimeStandardsDTOS.forEach((item) => {
+          if (item.bandPrice != null && item.bandPrice != "") {
+            item.bandPrice = item.bandPrice * 100;
+          }
+          if (item.originalPrice != null && item.originalPrice != "") {
+            item.originalPrice = item.originalPrice * 100;
+          }
+          // if (this.discountWay == 2) {
+          //   if (item.discountPrice != null && item.discountPrice != "") {
+          //     item.discountPrice = item.discountPrice * 100;
+          //   }
+          // }
+        })
         if (this.productItem == undefined) {
           this.$emit("add-product", form);
         } else {
@@ -668,5 +745,91 @@ export default {
       console.log("ss", img.id - 1, this.imgs);
     },
   },
+  beforeDestroy () {
+    this.form = {
+      productCode: "",
+      status: 1,
+      startTime: undefined,
+      endTime: undefined,
+      limitNum: undefined,
+      personLimitNum: undefined,
+      discountWay: undefined,
+      full: undefined,
+      reduce: undefined,
+      activeObject: undefined,
+      productName: "",
+      productDescription: "",
+      activityImg: "",
+      productLimitedTimeDetail: { appDescription: "" },
+      commonImages: [],
+      productLimitedTimeStandardsDTOS: [
+        {
+          originalPrice: "",
+          discountPrice: "",
+          productLimitedTimeStandardsColour: [
+            {
+              tempId: "tempId" + new Date().getTime(),
+              colourImage: "",
+              colourName: "默认",
+              state: 1,
+            },
+          ],
+          standard: "",
+          state: 1,
+          tradePrice: "",
+        },
+      ],
+    }
+    this.imgs = [
+      {
+        imageUrl: "",
+        id: 1,
+        uid: undefined,
+        imgType: 8,
+      },
+      {
+        imageUrl: "",
+        id: 2,
+        uid: undefined,
+        imgType: 9,
+      },
+      {
+        imageUrl: "",
+        id: 3,
+        uid: undefined,
+        imgType: 9,
+      },
+      {
+        imageUrl: "",
+        id: 4,
+        uid: undefined,
+        imgType: 9,
+      },
+      {
+        imageUrl: "",
+        id: 5,
+        uid: undefined,
+        imgType: 9,
+      },
+    ]
+    this.standardList = [
+      {
+        originalPrice: "",
+        discountPrice: "",
+        productLimitedTimeStandardsColour: [
+          {
+            tempId: "tempId" + new Date().getTime(),
+            colourImage: "",
+            colourName: "",
+            state: 1,
+          },
+        ],
+        standard: "",
+        state: 1,
+        tradePrice: "",
+      },
+    ]
+    console.log(this.form)
+  }
 };
 </script>

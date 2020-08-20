@@ -54,7 +54,7 @@
       </el-table-column>
       <el-table-column align="center" label="面值" min-width="100px">
         <template slot-scope="{row}">
-          <span>{{ row.couponAmount }}</span>
+          <span>{{ row.couponAmount / 100}}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="使用条件" min-width="100px">

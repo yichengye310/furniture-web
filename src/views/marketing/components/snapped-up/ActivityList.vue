@@ -72,7 +72,9 @@
 
       <el-table-column label="操作" align="center" min-width="150" class-name="small-padding fixed-width" >
         <template slot-scope="{row}">
-
+          <el-button type="primary" v-if="permission.indexOf('AddSnappedUp524')!=-1" size="mini" @click="handleUpdate(row)">
+            编辑
+          </el-button>
           <el-button  size="mini" type="danger" @click="handleModifyStatus(row)" v-if="permission.indexOf('DeletePanicBuying52574')!=-1">
             删除
           </el-button>
@@ -113,6 +115,7 @@
         listQuery: {
           pageNo: 1,
           pageSize: 10,
+          type: 0,
           productCode: undefined,//选填，产品编号模糊查询
           productName: undefined,//选填，产品标题模糊查询
           discountWay: undefined,//选填，1满减(如：满3000减50) 2折扣（如：原价3000，折后价2500）
@@ -175,6 +178,9 @@
       handleCreate() {
         window.location.href="#/marketing/add-snapped-up"
       },
+      handleUpdate(row) {
+        window.location.href="#/marketing/update-snapped-up?id="+row.limitedTimeProductID
+      }
     }
   }
 </script>

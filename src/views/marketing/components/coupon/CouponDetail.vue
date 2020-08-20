@@ -200,6 +200,8 @@
           console.log(JSON.stringify(res))
           if (res.status === 0) {
             this.form = res.data;
+            this.form.couponAmount = this.form.couponAmount / 100
+            this.form.discountLimit = this.form.discountLimit / 100
           }
         })
       }
@@ -333,7 +335,10 @@
         form.couponBeginTime = new Date(form.couponBeginTime).getTime();
         form.couponEndTime = new Date(form.couponEndTime).getTime();
         if (flag) {
-          addCoupon(form).then(response => {
+          let param = JSON.parse(JSON.stringify(form))
+          param.couponAmount = +param.couponAmount * 100
+          param.discountLimit = +param.discountLimit * 100
+          addCoupon(param).then(response => {
             if (response.status === 0) {
               this.$message({
                 type: 'success',
@@ -474,7 +479,10 @@
         form.couponBeginTime = new Date(form.couponBeginTime).getTime();
         form.couponEndTime = new Date(form.couponEndTime).getTime();
         if (flag) {
-          updateCoupon(form).then(response => {
+          let param = JSON.parse(JSON.stringify(form))
+          param.couponAmount = +param.couponAmount * 100
+          param.discountLimit = +param.discountLimit * 100
+          updateCoupon(param).then(response => {
             if (response.status === 0) {
               this.$message({
                 type: 'success',

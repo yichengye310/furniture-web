@@ -227,7 +227,7 @@ export default {
         if (response.status == 0) {
           this.form = response.data
           console.log(this.form)
-          this.basicInformation[0].value = this.form.orderState ? orderStateFilter[this.form.orderState] : ''
+          this.basicInformation[0].value = orderStateFilter[this.form.orderState] || ''
           this.basicInformation[1].value = this.form.orderID
           this.basicInformation[2].value = this.form.orderPaidTime ? parseTime(this.form.orderPaidTime, '{y}-{m}-{d} {h}:{i}:{s}') : ''
           this.basicInformation[3].value = this.form.userName

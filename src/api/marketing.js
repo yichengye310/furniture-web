@@ -16,6 +16,20 @@ export function productLimitedTimeAdd(data) {
     data
   })
 }
+export function productLimitedTimeInfo(query) {
+  return request({
+    url: CODE.apiUrl() + '/productLimitedTime/productLimitedTimeDetail',//详情限时抢购
+    method: 'get',
+    params: query
+  })
+}
+export function productLimitedTimeUpdate(data) {
+  return request({
+    url: CODE.apiUrl() + '/productLimitedTime/edit',//修改限时抢购
+    method: 'post',
+    data
+  })
+}
 export function productLimitedTimeDelete(data) {
   return request({
     url: CODE.apiUrl() + '/productLimitedTime/delete',//添加限时抢购

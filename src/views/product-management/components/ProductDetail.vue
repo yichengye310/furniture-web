@@ -43,6 +43,7 @@
         <el-col :span="20">
           <el-form-item :required="true" label="产品简介">
             <el-input
+              maxlength="200"
               :disabled="pageType=='cat'"
               type="textarea"
               v-model="form.product.productDescription"
@@ -578,7 +579,7 @@ export default {
           return false;
         }
         if (item.bandPrice != null && item.bandPrice != "") {
-          item.bandPrice = item.bandPrice * 100;
+          // item.bandPrice = item.bandPrice * 100;
         } else {
           this.$message({
             type: "danger",
@@ -588,7 +589,7 @@ export default {
           return false;
         }
         if (item.tradePrice != null && item.tradePrice != "") {
-          item.tradePrice = item.tradePrice * 100;
+          // item.tradePrice = item.tradePrice * 100;
         } else {
           this.$message({
             type: "danger",
@@ -647,8 +648,16 @@ export default {
         });
         form.productStandardsDTOS.push(productStandardsDTO);
       });
-      console.log(form);
+      console.log('*****', form);
       if (flag) {
+        this.form.productStandardsDTOS.forEach((item) => {
+          if (item.bandPrice != null && item.bandPrice != "") {
+            item.bandPrice = item.bandPrice * 100;
+          }
+          if (item.tradePrice != null && item.tradePrice != "") {
+            item.tradePrice = item.tradePrice * 100;
+          }
+        })
         addProduct(form).then((response) => {
           if (response.status == 1) {
             this.$message({
