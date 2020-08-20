@@ -395,7 +395,7 @@ export default {
   mounted() {
     if (this.productItem != undefined) {
       this.form = JSON.parse(JSON.stringify(this.productItem));
-      this.form.commonImage = this.form.commonImages;
+      this.form.commonImages = this.form.commonImage;
       this.imgs = imgDemo;
       this.imgs[0] = {
         imageUrl: this.form.activityImg,
@@ -403,6 +403,7 @@ export default {
         uid: new Date().getTime() + "tempId",
         imgType: 8,
       };
+      // console.log('=====', this.form.commonImages)
       if (this.form.commonImages != null && this.form.commonImages.length > 0) {
         this.form.commonImages.forEach((item, index) => {
           let img = {
@@ -451,6 +452,7 @@ export default {
     //获取产品详情
     getProductDetail() {},
     onSubmit() {
+      console.log(this.form)
       var form = this.form;
       let flag = true;
       // if(form.product.levelThreeCategoryID==null||form.product.levelThreeCategoryID==""){
@@ -637,18 +639,20 @@ export default {
         form.productLimitedTimeStandardsDTOS.push(productStandardsDTO);
       });
       if (flag) {
-        this.form.productLimitedTimeStandardsDTOS.forEach((item) => {
+        form.commonImage = form.commonImages
+        form.productLimitedTimeStandardsDTOS.forEach((item) => {
           if (item.bandPrice != null && item.bandPrice != "") {
             item.bandPrice = item.bandPrice * 100;
           }
           if (item.originalPrice != null && item.originalPrice != "") {
             item.originalPrice = item.originalPrice * 100;
           }
-          // if (this.discountWay == 2) {
-          //   if (item.discountPrice != null && item.discountPrice != "") {
-          //     item.discountPrice = item.discountPrice * 100;
-          //   }
-          // }
+          if (item.discountPrice != null && item.discountPrice != "") {
+            item.discountPrice = item.discountPrice * 100;
+          }
+          if (item.tradePrice != null && item.tradePrice != "") {
+            item.tradePrice = item.tradePrice * 100;
+          }
         })
         if (this.productItem == undefined) {
           this.$emit("add-product", form);

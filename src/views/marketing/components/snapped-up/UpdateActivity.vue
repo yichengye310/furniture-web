@@ -54,13 +54,13 @@
               </el-table-column>
               <el-table-column label="批发价"  prop="discountPrice" align="center" form>
                 <template slot-scope="{row}">
-                  <span v-if="row.productLimitedTimeStandardsDTOS[0].discountPrice"  >{{ row.productLimitedTimeStandardsDTOS[0].discountPrice / 100 }}</span>
+                  <span v-if="row.productLimitedTimeStandardsDTOS[0].tradePrice"  >{{ row.productLimitedTimeStandardsDTOS[0].tradePrice / 100 }}</span>
                   <span v-else>0</span>
                 </template>
               </el-table-column>
               <el-table-column label="折扣价"  prop="tradePrice" align="center" form>
                 <template slot-scope="{row}">
-                  <span v-if="row.productLimitedTimeStandardsDTOS[0].tradePrice"  >{{ row.productLimitedTimeStandardsDTOS[0].tradePrice / 100 }}</span>
+                  <span v-if="row.productLimitedTimeStandardsDTOS[0].discountPrice"  >{{ row.productLimitedTimeStandardsDTOS[0].discountPrice / 100 }}</span>
                   <span v-else>0</span>
                 </template>
               </el-table-column>
@@ -149,6 +149,7 @@
             this.activity.reduce = r.data.reduce / 100
             this.form.productLimitedTimeDTOS = []
             this.form.productLimitedTimeDTOS.push(r.data)
+            this.form.activityImg = r.data.activityImg
           }
         })
       },

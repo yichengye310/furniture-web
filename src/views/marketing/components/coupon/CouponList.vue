@@ -49,7 +49,10 @@
       </el-table-column>
       <el-table-column align="center" label="优惠券类型" min-width="150px">
         <template slot-scope="{row}">
-          <span>{{ row.couponName }}</span>
+          <!-- <span>{{ row.couponName }}</span> -->
+          <span v-if="row.couponType === 1">活动优惠券</span>
+          <span v-if="row.couponType === 2">会员优惠券</span>
+          <span v-if="row.couponType === 3">直播优惠券</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="面值" min-width="100px">
@@ -59,7 +62,9 @@
       </el-table-column>
       <el-table-column align="center" label="使用条件" min-width="100px">
         <template slot-scope="{row}">
-          <span>{{ row.couponDescription }}</span>
+          <!-- <span>{{ row.couponDescription }}</span> -->
+          <span v-if="row.couponType === 1">满减(满减时有满减限制金额)</span>
+          <span v-if="row.couponType === 2">直接抵扣</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="有效时间" min-width="180px">
