@@ -63,8 +63,8 @@
       <el-table-column align="center" label="使用条件" min-width="100px">
         <template slot-scope="{row}">
           <!-- <span>{{ row.couponDescription }}</span> -->
-          <span v-if="row.couponType === 1">满减(满减时有满减限制金额)</span>
-          <span v-if="row.couponType === 2">直接抵扣</span>
+          <span v-if="row.discountType === 1">满减(满减时有满减限制金额)</span>
+          <span v-if="row.discountType === 2">直接抵扣</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="有效时间" min-width="180px">

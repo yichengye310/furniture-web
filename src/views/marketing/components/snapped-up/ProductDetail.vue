@@ -452,7 +452,6 @@ export default {
     //获取产品详情
     getProductDetail() {},
     onSubmit() {
-      console.log(this.form)
       var form = this.form;
       let flag = true;
       // if(form.product.levelThreeCategoryID==null||form.product.levelThreeCategoryID==""){
@@ -603,8 +602,9 @@ export default {
           standard: item.standard,
           state: item.state,
           tradePrice: item.tradePrice,
+          discountPrice: item.discountPrice
         };
-        console.log(JSON.stringify(item.productLimitedTimeStandardsColour));
+        // console.log(JSON.stringify(item.productLimitedTimeStandardsColour));
         item.productLimitedTimeStandardsColour.forEach(
           (productStandardsColour) => {
             if (
@@ -654,6 +654,7 @@ export default {
             item.tradePrice = item.tradePrice * 100;
           }
         })
+        // console.log('价格对比', form)
         if (this.productItem == undefined) {
           this.$emit("add-product", form);
         } else {
