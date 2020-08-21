@@ -95,7 +95,8 @@
         </el-table-column>
         <el-table-column align="center" label="产品图片" min-width="150px">
           <template slot-scope="{row}">
-            <img :src="row.titleImg" style="width: 5rem; height: 5rem;" alt/>
+            <!-- <img :src="row.titleImg" style="width: 5rem; height: 5rem;" alt/> -->
+            <img :src="row.activityImg" style="width: 5rem; height: 5rem;" alt/>
           </template>
         </el-table-column>
         <el-table-column align="center" label="产品标题" min-width="150px">
@@ -105,12 +106,15 @@
         </el-table-column>
         <el-table-column align="center" label="价格" min-width="150px">
           <template slot-scope="{row}">
-            <span>{{(row.lowPrice || 0) * .01}}元</span>
+            <!-- <span>{{(row.lowPrice || 0) * .01}}元</span> -->
+            <span>{{(row.productLimitedTimeStandardsDTOS[0].originalPrice || 0) * .01}}元</span>
           </template>
         </el-table-column>
         <el-table-column align="center" label="库存" min-width="150px">
           <template slot-scope="{row}">
-            <span>{{row.productStockNum || 0}}</span>
+            <!-- <span>{{row.productStockNum || 0}}</span>
+            <span>{{row.productStockNum || 0}}</span> -->
+            <span>{{row.limitNum || 0}}</span>
           </template>
         </el-table-column>
       </el-table>
