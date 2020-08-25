@@ -159,6 +159,9 @@ export default {
       this.level = 2;
       this.form.hotFlag = 1;
       this.dialogVisible = true;
+      this.$nextTick(() => {
+        this.closeDialog()
+      })
     },
     handleUpdate(row) {
       this.type = "update";

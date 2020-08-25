@@ -353,7 +353,8 @@ export default {
             count++
           }
         })
-        if (count === list.length) {
+        // if (count === list.length) { // 全部选中 分组则选中
+        if (count > 0) { // 只要选中一个 分组则选中
           if (this.checkList.indexOf(obj.code) === -1) this.checkList.push(obj.code)
         } else {
           if (this.checkList.indexOf(obj.code) !== -1) this.checkList.splice(this.checkList.indexOf(obj.code), 1)
