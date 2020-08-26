@@ -141,6 +141,14 @@
           });
           return;
         }
+        
+        if(this.form.productDetail.appDescription==null||this.form.productDetail.appDescription==""){
+          this.$message({
+            type: 'danger',
+            message: "请填写产品详情！！"
+          });
+          return;
+        }
         // console.log(this.form)
         updateProductImg(this.form).then(response => {
           if(response.status==1){

@@ -240,6 +240,28 @@
           })
         }
 
+        if(this.form.product.productName==null||this.form.product.productName==""){
+          this.$message({
+            type: 'danger',
+            message: "请填写产品标题！！"
+          });
+          return;
+        }
+        if(this.form.product.productDescription==null||this.form.product.productDescription==""){
+          this.$message({
+            type: 'danger',
+            message: "请填写产品简介！！"
+          });
+          return;
+        }
+        if(this.form.product.titleVideo==null||this.form.product.titleVideo==""){
+          this.$message({
+            type: 'danger',
+            message: "请上传产品视频！！"
+          });
+          return;
+        }
+        
         if(this.form.product.titleImg==null||this.form.product.titleImg==""){
           this.$message({
             type: 'danger',

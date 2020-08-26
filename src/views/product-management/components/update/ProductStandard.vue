@@ -215,6 +215,53 @@ export default {
         });
         this.form.productStandardsDTOS.push(productStandardsDTO);
       });
+      /* 验证 */
+      this.form.productStandardsDTOS.forEach(item => {
+        if (item.standard==null||item.standard=='') {
+          this.$message({
+            type: 'danger',
+            message: "请填写尺寸！！"
+          });
+          throw new Error('请填写尺寸！！')
+        }
+        if (item.bandPrice==null||item.bandPrice=='') {
+          this.$message({
+            type: 'danger',
+            message: "请填写原价！！"
+          });
+          throw new Error('请填写原价！！')
+        }
+        if (item.tradePrice==null||item.tradePrice=='') {
+          this.$message({
+            type: 'danger',
+            message: "请填写批发价！！"
+          });
+          throw new Error('请填写批发价！！')
+        }
+        item.productStandardsColours.forEach(child => {
+          if (child.colourImage==null||child.colourImage=='') {
+            this.$message({
+              type: 'danger',
+              message: "请上传图片！！"
+            });
+            throw new Error('请上传图片！！')
+          }
+          if (child.colourName==null||child.colourName=='') {
+            this.$message({
+              type: 'danger',
+              message: "请填写颜色名称！！"
+            });
+            throw new Error('请填写颜色名称！！')
+          }
+          if (child.productStockNum==null||child.productStockNum=='') {
+            this.$message({
+              type: 'danger',
+              message: "请填写库存！！"
+            });
+            throw new Error('请填写库存！！')
+          }
+        })
+      })
       console.log(this.form);
       updateProductStandards(this.form).then((response) => {
         if (response.status == 1) {
