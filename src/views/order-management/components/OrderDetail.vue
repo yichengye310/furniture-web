@@ -79,7 +79,8 @@
     <el-table :data="recipientInformation" :show-header="false" border style="width: 800px">
       <el-table-column prop="label" label="名称" width="180">
         <template slot-scope="{row}">
-          <span>{{ row.label }}</span>
+          <!-- <span>{{ row.label }}</span> -->
+          <span>{{ row.name }}</span>
         </template>
       </el-table-column>
       <el-table-column prop="value" label="值">
@@ -97,8 +98,9 @@
       </el-table-column>
       <el-table-column prop="value" label="值">
         <template slot-scope="{row}">
-          <span v-if="row.label='发货时间'&&row.value">{{ row.value | parseTime('{y}-{m}-{d} {h}:{i}:{s}') }}</span>
-          <span v-else>{{ row.value }}</span>
+          <!-- <span v-if="row.label='发货时间'&&row.value">{{ row.value | parseTime('{y}-{m}-{d} {h}:{i}:{s}') }}</span> -->
+          <!-- <span v-else>{{ row.value }}</span> -->
+          {{ row.value }}
         </template>
       </el-table-column>
     </el-table>
@@ -168,14 +170,17 @@ export default {
       logisticsInformation: [
         {
           label: '物流公司',
+          name: '物流公司',
           value: ''
         },
         {
           label: '物流单号',
+          name: '物流单号',
           value: ''
         },
         {
           label: '发货时间',
+          name: '发货时间',
           value: ''
         }
       ],

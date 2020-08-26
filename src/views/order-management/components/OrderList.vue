@@ -298,6 +298,7 @@ export default {
   },
   created() {
     this.permission = JSON.parse(Cookies.get("permission"));
+    // this.permission = JSON.parse(sessionStorage.getItem("permission"));
     if (
       (this.pageType === 4 &&
         this.permission.indexOf("OrderSearch43274") != -1) || //售后订单
