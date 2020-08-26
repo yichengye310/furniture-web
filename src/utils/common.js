@@ -1,7 +1,7 @@
 // 测试
-// var api= 'https://test.ammsshop.com/admin-api'
+var api= 'http://192.168.2.98:8084'
 // 正式
-var api= 'https://www.ammsshop.com/admin-api'
+// var api= 'https://www.ammsshop.com/admin-api'
 var permission = [
   {
     code:'ProductManagement5345',

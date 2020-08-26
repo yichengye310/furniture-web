@@ -55,7 +55,7 @@ const SERVER_LIST = [
     port: 22, // 端口
     username: 'root', // 登录服务器的账号
     password: 'YLCloud1788%', // 登录服务器的账号
-    path: '/home/gumingchen/project/aimumisi/admin'// 发布至静态服务器的项目路径
+    path: '/home/gumingchen/project/dibang/admin'// 发布至静态服务器的项目路径
   },
   {
     id: 1,
@@ -65,7 +65,7 @@ const SERVER_LIST = [
     port: 22,
     username: 'root',
     password: 'YLCloud1788',
-    path: '/home/gumingchen/project/aimumisi/admin'
+    path: '/home/gumingchen/project/dibang/admin'
   },
   {
     id: 1,
@@ -75,7 +75,7 @@ const SERVER_LIST = [
     port: 22,
     username: 'root',
     password: 'YLCloud1788',
-    path: '/home/gumingchen/project/aimumisi/admin'
+    path: '/home/gumingchen/project/dibang/admin'
   }
 ]
 
