@@ -456,7 +456,7 @@ export const asyncRoutes = [
     meta: {
       title: '直播管理',
       icon: 'live',
-      roles: ['RoleManagement5123233'] // or you can only set roles in sub nav
+      roles: ['LiveManagement6452'] // or you can only set roles in sub nav
     },
     children: [
       {
@@ -465,7 +465,7 @@ export const asyncRoutes = [
         name: 'LiveAuthorize',
         meta: {
           title: '直播中心',
-          roles: ['RoleManagement5123233'] // or you can only set roles in sub nav
+          roles: ['AuthorizeLive2534'] // or you can only set roles in sub nav
         }
       }
     ]
