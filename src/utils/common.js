@@ -1,7 +1,7 @@
 // 测试
-var api= 'http://192.168.2.98:8084'
+//var api= 'http://192.168.2.98:8084'
 // 正式
-// var api= 'https://www.ammsshop.com/admin-api'
+var api= 'https://www.yelangwhcm.com/admin-dibang-api'
 var permission = [
   {
     code:'ProductManagement5345',
