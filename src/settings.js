@@ -1,5 +1,5 @@
 module.exports = {
-  title: '爱慕米思后台管理系统',
+  title: '缔邦后台管理系统',
 
   /**
    * @type {boolean} true | false
