@@ -147,7 +147,7 @@ export default {
           value: ''
         },
         {
-          label: '卖家ID',
+          label: '买家ID',
           value: ''
         }
       ],
@@ -238,7 +238,7 @@ export default {
           this.basicInformation[0].value = orderStateFilter[this.form.orderState] || ''
           this.basicInformation[1].value = this.form.orderID
           this.basicInformation[2].value = this.form.orderPaidTime ? parseTime(this.form.orderPaidTime, '{y}-{m}-{d} {h}:{i}:{s}') : ''
-          this.basicInformation[3].value = this.form.userName
+          this.basicInformation[3].value = this.form.userPhone
           this.purchaseDetails.push(this.form)
           this.recipientInformation[0].value = this.form.receiverName
           this.recipientInformation[1].value = this.form.province + ' ' + this.form.city + ' ' + this.form.county + ' ' + this.form.receiveAddress
