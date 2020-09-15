@@ -122,8 +122,8 @@
       </el-table-column>
       <el-table-column label="订单来源" min-width="100">
         <template slot-scope="{row}">
-          <span v-if="row.orderFrom === 1">直播订单</span>
-          <span v-else-if="row.orderFrom === 2">普通订单</span>
+          <span v-if="row.orderFrom === 1">普通订单</span>
+          <span v-else-if="row.orderFrom === 2">直播订单</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -185,8 +185,8 @@ const calendarTypeOptions = [
 ];
 
 const orderFromTypeOptions = [
-  { key: 1, display_name: "直播订单" },
-  { key: 2, display_name: "普通订单" },
+  { key: 1, display_name: "普通订单" },
+  { key: 2, display_name: "直播订单" },
 ];
 
 // arr to obj, such as { CN : "China", US : "USA" }
@@ -297,8 +297,8 @@ export default {
     };
   },
   created() {
-    this.permission = JSON.parse(Cookies.get("permission"));
-    // this.permission = JSON.parse(sessionStorage.getItem("permission"));
+    // this.permission = JSON.parse(Cookies.get("permission"));
+    this.permission = JSON.parse(sessionStorage.getItem("permission"));
     if (
       (this.pageType === 4 &&
         this.permission.indexOf("OrderSearch43274") != -1) || //售后订单
