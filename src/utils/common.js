@@ -232,11 +232,11 @@ var permission = [
             id:'040301',
             code:'AddSnappedUp524',
           },
-          // {
-          //   name:'查看抢购',
-          //   id:'040302',
-          //   code:'ViewPanicBuying52414',
-          // },
+          {
+            name:'编辑抢购',
+            id:'040302',
+            code:'EditPanicBuying52414',
+          },
           {
             name:'删除抢购',
             id:'040303',

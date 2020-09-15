@@ -123,7 +123,8 @@ export default {
     };
   },
   created() {
-    this.permission = JSON.parse(Cookies.get("permission"));
+    // this.permission = JSON.parse(Cookies.get("permission"));
+    this.permission = JSON.parse(sessionStorage.getItem("permission"));
     this.getList();
   },
   methods: {

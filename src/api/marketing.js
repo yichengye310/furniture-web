@@ -34,7 +34,7 @@ export function productLimitedTimeDelete(data) {
   return request({
     url: CODE.apiUrl() + '/productLimitedTime/delete',//添加限时抢购
     method: 'post',
-    data
+    params: data
   })
 }
 

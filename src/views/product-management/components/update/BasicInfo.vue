@@ -81,6 +81,15 @@
             <el-radio-group v-model="form.product.isSpecialGoods " >
               <el-radio :label="2" >普通产品</el-radio>
               <el-radio :label="1">会员专属产品</el-radio>
+              <el-select
+                :disabled="pageType=='cat'"
+                v-if="form.product.isSpecialGoods === 1"
+                v-model="form.product.vipProductType"
+                value="1"
+              >
+                <el-option :key="1" :value="1" label="专享好物"></el-option>
+                <el-option :key="2" :value="2" label="99元专区"></el-option>
+              </el-select>
             </el-radio-group>
           </el-form-item>
         </el-col>

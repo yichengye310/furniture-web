@@ -317,6 +317,16 @@ export const asyncRoutes = [
         }
       },
       {
+        path: 'update-snapped-up',
+        component: () => import('@/views/marketing/update-snapped-up'),
+        hidden: true,
+        name: 'UpdateSnappedUp',
+        meta: {
+          title: '编辑限时抢购',
+          roles: ['EditPanicBuying52414'] // or you can only set roles in sub nav
+        }
+      },
+      {
         path: 'coupon-management',
         component: () => import('@/views/marketing/coupon-management'),
         name: 'CouponManagement',

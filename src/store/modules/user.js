@@ -56,11 +56,9 @@ const actions = {
           permission = [...permissionContent.permission];
         }
         data.businessRole.permissionContent = undefined
-        Cookies.set('userInfo', JSON.stringify(data));
-        console.log(permission);
-        sessionStorage.setItem('permission', JSON.stringify(permission));
-        console.log(Cookies.get('userInfo'));
-        console.log(Cookies.get('permission'));
+        Cookies.set('userInfo', JSON.stringify(data))
+        // Cookies.set('permission', JSON.stringify(permission))
+        sessionStorage.setItem('permission', JSON.stringify(permission))
         resolve()
       }).catch(error => {
         reject(error)
@@ -74,6 +72,10 @@ const actions = {
       console.log('userInfo')
       const userInfo = JSON.parse(Cookies.get('userInfo'))
       console.log(userInfo)
+<<<<<<< HEAD
+=======
+      // const permission = JSON.parse(Cookies.get('permission'))
+>>>>>>> c8475e0373cd930e95b161a145ac1dc2be344bf9
       const permission = JSON.parse(sessionStorage.getItem('permission'))
       console.log(permission)
       var adminToken = {
