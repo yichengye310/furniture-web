@@ -72,7 +72,7 @@
 
       <el-table-column label="操作" align="center" min-width="150" class-name="small-padding fixed-width" >
         <template slot-scope="{row}">
-          <el-button type="primary" v-if="permission.indexOf('EditPanicBuying52414')!=-1" size="mini" @click="handleUpdate(row)">
+          <el-button type="primary" v-if="permission.indexOf('AddSnappedUp524')!=-1" size="mini" @click="handleUpdate(row)">
             编辑
           </el-button>
           <el-button  size="mini" type="danger" @click="handleModifyStatus(row)" v-if="permission.indexOf('DeletePanicBuying52574')!=-1">

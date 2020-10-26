@@ -48,12 +48,11 @@ const actions = {
         commit('SET_AVATAR', 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif')
         commit('SET_INTRODUCTION', data.businessRole.roleName)
         setToken(data.token)
-        let permission = [];
-        // console.log(JSON.stringify(data));
+        var permission = []
         if (data.businessRole.permissionContent != undefined) {
-          let permissionContent = JSON.parse(data.businessRole.permissionContent)
-          //console.log(permissionContent.permission);
-          permission = [...permissionContent.permission];
+
+          var permissionContent = JSON.parse(data.businessRole.permissionContent)
+          permission = permissionContent.permission
         }
         data.businessRole.permissionContent = undefined
         Cookies.set('userInfo', JSON.stringify(data))
@@ -72,10 +71,7 @@ const actions = {
       console.log('userInfo')
       const userInfo = JSON.parse(Cookies.get('userInfo'))
       console.log(userInfo)
-<<<<<<< HEAD
-=======
       // const permission = JSON.parse(Cookies.get('permission'))
->>>>>>> c8475e0373cd930e95b161a145ac1dc2be344bf9
       const permission = JSON.parse(sessionStorage.getItem('permission'))
       console.log(permission)
       var adminToken = {

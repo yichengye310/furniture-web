@@ -188,85 +188,85 @@ export const asyncRoutes = [
       }
     ]
   },
-  {
-    path: '/order-management',
-    component: Layout,
-    redirect: '/order-management/order-select-list',
-    alwaysShow: true, // will always show the root menu
-    name: 'OrderManagement',
-    meta: {
-      title: '订单管理',
-      icon: 'shopping',
-      roles: ['OrderManagement753463'] // or you can only set roles in sub nav
-    },
-    children: [
-      {
-        path: 'cat-order-detail',
-        component: () => import('@/views/order-management/cat-order-detail'),
-        hidden: true,
-        name: 'CatOrderDetail',
-        meta: {
-          title: '订单详情查看',
-          roles: ['OrderView76657','OrderView52423'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'order-ship',
-        component: () => import('@/views/order-management/order-ship'),
-        hidden: true,
-        name: 'OrderShip',
-        meta: {
-          title: '订单发货',
-          roles: ['OrderDelivery765527'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'order-select-list',
-        component: () => import('@/views/order-management/order-select-list'),
-        name: 'OrderSelectList',
-        meta: {
-          title: '订单查询',
-          roles: ['OrderSelect42343'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'after-sales-order-list',
-        component: () => import('@/views/order-management/after-sales-order-list'),
-        name: 'AfterSalesOrderList',
-        meta: {
-          title: '售后订单',
-          roles: ['AfterSalesOrders422343'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'to-be-delivered-list',
-        component: () => import('@/views/order-management/to-be-delivered-list'),
-        name: 'ToBeDeliveredList',
-        meta: {
-          title: '待发货',
-          roles: ['ToBeDelivered432446'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'to-be-received-list',
-        component: () => import('@/views/order-management/to-be-received-list'),
-        name: 'ToBeReceivedList',
-        meta: {
-          title: '待收货',
-          roles: ['ToBeReceived634543'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'completed-list',
-        component: () => import('@/views/order-management/completed-list'),
-        name: 'CompletedList',
-        meta: {
-          title: '已完成',
-          roles: ['OrderCompleted42wqe3'] // or you can only set roles in sub nav
-        }
-      },
-    ]
-  },
+  // {
+  //   path: '/order-management',
+  //   component: Layout,
+  //   redirect: '/order-management/order-select-list',
+  //   alwaysShow: true, // will always show the root menu
+  //   name: 'OrderManagement',
+  //   meta: {
+  //     title: '订单管理',
+  //     icon: 'shopping',
+  //     roles: ['OrderManagement753463'] // or you can only set roles in sub nav
+  //   },
+  //   children: [
+  //     {
+  //       path: 'cat-order-detail',
+  //       component: () => import('@/views/order-management/cat-order-detail'),
+  //       hidden: true,
+  //       name: 'CatOrderDetail',
+  //       meta: {
+  //         title: '订单详情查看',
+  //         roles: ['OrderView76657','OrderView52423'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //     {
+  //       path: 'order-ship',
+  //       component: () => import('@/views/order-management/order-ship'),
+  //       hidden: true,
+  //       name: 'OrderShip',
+  //       meta: {
+  //         title: '订单发货',
+  //         roles: ['OrderDelivery765527'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //     {
+  //       path: 'order-select-list',
+  //       component: () => import('@/views/order-management/order-select-list'),
+  //       name: 'OrderSelectList',
+  //       meta: {
+  //         title: '订单查询',
+  //         roles: ['OrderSelect42343'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //     {
+  //       path: 'after-sales-order-list',
+  //       component: () => import('@/views/order-management/after-sales-order-list'),
+  //       name: 'AfterSalesOrderList',
+  //       meta: {
+  //         title: '售后订单',
+  //         roles: ['AfterSalesOrders422343'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //     {
+  //       path: 'to-be-delivered-list',
+  //       component: () => import('@/views/order-management/to-be-delivered-list'),
+  //       name: 'ToBeDeliveredList',
+  //       meta: {
+  //         title: '待发货',
+  //         roles: ['ToBeDelivered432446'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //     {
+  //       path: 'to-be-received-list',
+  //       component: () => import('@/views/order-management/to-be-received-list'),
+  //       name: 'ToBeReceivedList',
+  //       meta: {
+  //         title: '待收货',
+  //         roles: ['ToBeReceived634543'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //     {
+  //       path: 'completed-list',
+  //       component: () => import('@/views/order-management/completed-list'),
+  //       name: 'CompletedList',
+  //       meta: {
+  //         title: '已完成',
+  //         roles: ['OrderCompleted42wqe3'] // or you can only set roles in sub nav
+  //       }
+  //     },
+  //   ]
+  // },
   {
     path: '/marketing',
     component: Layout,
@@ -297,89 +297,79 @@ export const asyncRoutes = [
           roles: ['HotRecommendation653463'] // or you can only set roles in sub nav
         }
       },
-      {
-        path: 'snapped-up',
-        component: () => import('@/views/marketing/snapped-up'),
-        name: 'SnappedUp',
-        meta: {
-          title: '限时抢购',
-          roles: ['SnappedUp63564'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'add-snapped-up',
-        component: () => import('@/views/marketing/add-snapped-up'),
-        hidden: true,
-        name: 'AddSnappedUp',
-        meta: {
-          title: '添加限时抢购',
-          roles: ['AddSnappedUp524'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'update-snapped-up',
-        component: () => import('@/views/marketing/update-snapped-up'),
-        hidden: true,
-        name: 'UpdateSnappedUp',
-        meta: {
-          title: '编辑限时抢购',
-          roles: ['EditPanicBuying52414'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'coupon-management',
-        component: () => import('@/views/marketing/coupon-management'),
-        name: 'CouponManagement',
-        meta: {
-          title: '优惠券设置',
-          roles: ['coupon1234'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'add-coupon',
-        component: () => import('@/views/marketing/add-coupon'),
-        name: 'AddCoupon',
-        hidden: true,
-        meta: {
-          title: '创建优惠券',
-          roles: ['addCoupon1234'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'update-coupon',
-        component: () => import('@/views/marketing/update-coupon'),
-        name: 'EditCoupon',
-        hidden: true,
-        meta: {
-          title: '编辑优惠券',
-          roles: ['editCoupon1234'] // or you can only set roles in sub nav
-        }
-      }
+      // {
+      //   path: 'snapped-up',
+      //   component: () => import('@/views/marketing/snapped-up'),
+      //   name: 'SnappedUp',
+      //   meta: {
+      //     title: '限时抢购',
+      //     roles: ['SnappedUp63564'] // or you can only set roles in sub nav
+      //   }
+      // },
+      // {
+      //   path: 'add-snapped-up',
+      //   component: () => import('@/views/marketing/add-snapped-up'),
+      //   hidden: true,
+      //   name: 'AddSnappedUp',
+      //   meta: {
+      //     title: '添加限时抢购',
+      //     roles: ['AddSnappedUp524'] // or you can only set roles in sub nav
+      //   }
+      // },
+      // {
+      //   path: 'coupon-management',
+      //   component: () => import('@/views/marketing/coupon-management'),
+      //   name: 'CouponManagement',
+      //   meta: {
+      //     title: '优惠券设置',
+      //     roles: ['coupon1234'] // or you can only set roles in sub nav
+      //   }
+      // },
+      // {
+      //   path: 'add-coupon',
+      //   component: () => import('@/views/marketing/add-coupon'),
+      //   name: 'AddCoupon',
+      //   hidden: true,
+      //   meta: {
+      //     title: '创建优惠券',
+      //     roles: ['addCoupon1234'] // or you can only set roles in sub nav
+      //   }
+      // },
+      // {
+      //   path: 'update-coupon',
+      //   component: () => import('@/views/marketing/update-coupon'),
+      //   name: 'EditCoupon',
+      //   hidden: true,
+      //   meta: {
+      //     title: '编辑优惠券',
+      //     roles: ['editCoupon1234'] // or you can only set roles in sub nav
+      //   }
+      // }
     ]
   },
-  {
-    path: '/custom-management',
-    component: Layout,
-    redirect: '/custom-management/custom-list',
-    alwaysShow: true, // will always show the root menu
-    name: 'CustomManagement',
-    meta: {
-      title: '定制管理',
-      icon: 'size',
-      roles: ['CustomManagement1252'] // or you can only set roles in sub nav
-    },
-    children: [
-      {
-        path: 'custom-list',
-        component: () => import('@/views/custom-management/custom-list'),
-        name: 'CustomList',
-        meta: {
-          title: '定制管理',
-          roles: ['CustomList673'] // or you can only set roles in sub nav
-        }
-      }
-    ]
-  },
+  // {
+  //   path: '/custom-management',
+  //   component: Layout,
+  //   redirect: '/custom-management/custom-list',
+  //   alwaysShow: true, // will always show the root menu
+  //   name: 'CustomManagement',
+  //   meta: {
+  //     title: '定制管理',
+  //     icon: 'size',
+  //     roles: ['CustomManagement1252'] // or you can only set roles in sub nav
+  //   },
+  //   children: [
+  //     {
+  //       path: 'custom-list',
+  //       component: () => import('@/views/custom-management/custom-list'),
+  //       name: 'CustomList',
+  //       meta: {
+  //         title: '定制管理',
+  //         roles: ['CustomList673'] // or you can only set roles in sub nav
+  //       }
+  //     }
+  //   ]
+  // },
   {
     path: '/user-management',
     component: Layout,
@@ -456,30 +446,30 @@ export const asyncRoutes = [
 
     ]
   },
-  {
-    // TODO
-    path: '/live-management',
-    component: Layout,
-    redirect: '/live-management/live-center',
-    alwaysShow: true, // will always show the root menu
-    name: 'LiveManagement',
-    meta: {
-      title: '直播管理',
-      icon: 'live',
-      roles: ['RoleManagement5123233'] // or you can only set roles in sub nav
-    },
-    children: [
-      {
-        path: 'live-center',
-        component: () => import('@/views/live-management/live-center'),
-        name: 'LiveAuthorize',
-        meta: {
-          title: '直播中心',
-          roles: ['RoleManagement5123233'] // or you can only set roles in sub nav
-        }
-      }
-    ]
-  },
+  // {
+  //   // TODO
+  //   path: '/live-management',
+  //   component: Layout,
+  //   redirect: '/live-management/live-center',
+  //   alwaysShow: true, // will always show the root menu
+  //   name: 'LiveManagement',
+  //   meta: {
+  //     title: '直播管理',
+  //     icon: 'live',
+  //     roles: ['RoleManagement5123233'] // or you can only set roles in sub nav
+  //   },
+  //   children: [
+  //     {
+  //       path: 'live-center',
+  //       component: () => import('@/views/live-management/live-center'),
+  //       name: 'LiveAuthorize',
+  //       meta: {
+  //         title: '直播中心',
+  //         roles: ['RoleManagement5123233'] // or you can only set roles in sub nav
+  //       }
+  //     }
+  //   ]
+  // },
   /** when your routing map is too long, you can split it into small modules **/
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

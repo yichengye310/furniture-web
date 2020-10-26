@@ -552,14 +552,14 @@ export default {
         flag = false;
         return false;
       }
-      if (form.product.titleVideo == null || form.product.titleVideo == "") {
-        this.$message({
-          type: "danger",
-          message: "请上传产品视频！！",
-        });
-        flag = false;
-        return false;
-      }
+      // if (form.product.titleVideo == null || form.product.titleVideo == "") {
+      //   this.$message({
+      //     type: "danger",
+      //     message: "请上传产品视频！！",
+      //   });
+      //   flag = false;
+      //   return false;
+      // }
       if (this.standardList == null || this.standardList.length == 0) {
         this.$message({
           type: "danger",

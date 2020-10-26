@@ -263,13 +263,13 @@
           });
           return;
         }
-        if(this.form.product.titleVideo==null||this.form.product.titleVideo==""){
-          this.$message({
-            type: 'danger',
-            message: "请上传产品视频！！"
-          });
-          return;
-        }
+        // if(this.form.product.titleVideo==null||this.form.product.titleVideo==""){
+        //   this.$message({
+        //     type: 'danger',
+        //     message: "请上传产品视频！！"
+        //   });
+        //   return;
+        // }
         
         if(this.form.product.titleImg==null||this.form.product.titleImg==""){
           this.$message({
