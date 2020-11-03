@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      title: '爱慕米思后台管理系统',
+      title: '乔利床垫后台管理系统',
       logo: 'logo-baise.png'
     }
   }

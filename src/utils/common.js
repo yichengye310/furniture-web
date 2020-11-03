@@ -1,7 +1,7 @@
 // 测试
 // var api= 'https://test.ammsshop.com/admin-api'
 // 正式
-var api= 'https://www.ammsshop.com/admin-api'
+var api= 'https://www.yelangwhcm.com/admin-qiaoli-api'
 var permission = [
   {
     code:'ProductManagement5345',
