@@ -1,7 +1,7 @@
 // 测试
-var api= 'http://192.168.2.98:8084'
+// var api= 'https://test.ammsshop.com/admin-api'
 // 正式
-// var api= 'https://www.ammsshop.com/admin-api'
+var api= 'https://www.ammsshop.com/admin-api'
 var permission = [
   {
     code:'ProductManagement5345',
@@ -232,11 +232,11 @@ var permission = [
             id:'040301',
             code:'AddSnappedUp524',
           },
-          // {
-          //   name:'查看抢购',
-          //   id:'040302',
-          //   code:'ViewPanicBuying52414',
-          // },
+          {
+            name:'编辑抢购',
+            id:'040302',
+            code:'EditPanicBuying52414',
+          },
           {
             name:'删除抢购',
             id:'040303',
