@@ -57,7 +57,7 @@ const actions = {
         data.businessRole.permissionContent = undefined
         Cookies.set('userInfo', JSON.stringify(data))
         // Cookies.set('permission', JSON.stringify(permission))
-        sessionStorage.setItem('permission', JSON.stringify(permission))
+        sessionStorage.setItem("permission", JSON.stringify(permission));
         resolve()
       }).catch(error => {
         reject(error)
@@ -71,7 +71,6 @@ const actions = {
       console.log('userInfo')
       const userInfo = JSON.parse(Cookies.get('userInfo'))
       console.log(userInfo)
-      // const permission = JSON.parse(Cookies.get('permission'))
       const permission = JSON.parse(sessionStorage.getItem('permission'))
       console.log(permission)
       var adminToken = {

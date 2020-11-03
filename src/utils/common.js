@@ -1,8 +1,7 @@
 // 测试
-//var api = 'http://192.168.2.98:8083'
+var api = 'https://www.yelangwhcm.com/admin-qiaoli-api'
 // 正式
-//var api = 'http://120.79.99.73:8083'
-var api= 'https://www.yelangwhcm.com/admin-kyt-api'
+// var api= 'https://www.ammsshop.com/admin-api'
 var permission = [{
     code: 'ProductManagement5345',
     id: '010000',

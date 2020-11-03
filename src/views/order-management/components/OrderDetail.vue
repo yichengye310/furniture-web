@@ -155,17 +155,14 @@ export default {
       recipientInformation: [
         {
           label: '收货人',
-          name: '收货人',
           value: ''
         },
         {
           label: '收货人地址',
-          name: '收货人地址',
           value: ''
         },
         {
           label: '联系方式',
-          name: '联系方式',
           value: ''
         }
       ],

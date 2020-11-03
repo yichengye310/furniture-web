@@ -1,22 +1,26 @@
 <template>
-  <div class="sidebar-logo-container" :class="{'collapse':collapse}">
+  <div class="sidebar-logo-container" :class="{ collapse: collapse }">
     <transition name="sidebarLogoFade">
-      <router-link v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
-        <img v-if="logo" :src="logo" class="sidebar-logo">
-        <h1 v-else class="sidebar-title">{{ title }} </h1>
+      <router-link
+        v-if="collapse"
+        key="collapse"
+        class="sidebar-logo-link"
+        to="/"
+      >
+        <img v-if="logo" :src="logo" class="sidebar-logo" />
+        <h1 v-else class="sidebar-title">{{ title }}</h1>
       </router-link>
       <router-link v-else key="expand" class="sidebar-logo-link" to="/">
-        <img v-if="logo" :src="logo" class="sidebar-logo">
-        <h1 class="sidebar-title">{{ title }} </h1>
+        <img v-if="logo" :src="logo" class="sidebar-logo" />
+        <h1 class="sidebar-title">{{ title }}</h1>
       </router-link>
     </transition>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'SidebarLogo',
+  name: "SidebarLogo",
   props: {
     collapse: {
       type: Boolean,
@@ -25,11 +29,11 @@ export default {
   },
   data() {
     return {
-      title: '凯雅婷后台管理系统',
-      logo: 'logo-baise.png'
-    }
+      title: "凯雅婷后台管理系统",
+      logo: "logo-baise.png"
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -48,7 +52,7 @@ export default {
   height: 50px;
   line-height: 50px;
   /*background: #2b2f3a;*/
-  background: #FF5378;
+  background: #ff5378;
   text-align: center;
   overflow: hidden;
 

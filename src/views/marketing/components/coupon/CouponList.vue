@@ -203,8 +203,7 @@ export default {
   },
   props: ["couponType"],
   created() {
-    // this.permission = JSON.parse(Cookies.get("permission"));
-    this.permission = JSON.parse(sessionStorage.getItem("permission"));
+    this.permission = JSON.parse(Cookies.get("permission"));
     this.listQuery.pageNo = 1;
     this.getList();
   },

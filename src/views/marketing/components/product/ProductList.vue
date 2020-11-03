@@ -234,14 +234,12 @@ export default {
     };
   },
   created() {
-    // this.permission = JSON.parse(Cookies.get("permission"));
-    this.permission = JSON.parse(sessionStorage.getItem("permission"));
+    this.permission = JSON.parse(Cookies.get("permission"));
     this.listQuery.flag = this.flag;
     this.getList();
   },
   mounted() {
-    // this.permission = JSON.parse(Cookies.get("permission"));
-    this.permission = JSON.parse(sessionStorage.getItem("permission"));
+    this.permission = JSON.parse(Cookies.get("permission"));
     this.listQuery.flag = this.flag;
     this.getList();
   },

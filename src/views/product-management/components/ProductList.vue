@@ -162,8 +162,7 @@
       }
     },
     created() {
-      // this.permission=JSON.parse(Cookies.get("permission"));
-      this.permission=JSON.parse(sessionStorage.getItem("permission"));
+      this.permission=JSON.parse(Cookies.get("permission"));
       this.getCategoryLevelTwoListByPage()
       this.getList()
     },
