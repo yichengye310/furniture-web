@@ -9,7 +9,7 @@
     >
     <el-row style="background: #fff;height: 100px;padding-top: 20px;padding-left: 200px">
       <el-col :span="2">
-        <img src="@/assets/images/logo_170_80.jpg" width="320" alt="IM-MISS">
+        <img src="@/assets/images/logo_170_80.png" width="320" alt="IM-MISS">
       </el-col>
     </el-row>
     <el-form

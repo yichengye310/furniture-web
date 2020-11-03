@@ -67,6 +67,7 @@
     props:['userType'],/*通过props接收父组件传递过来的数据 */
     created() {
       // console.log("created: " + this.userType)
+      // this.permission = JSON.parse(Cookies.get('permission'));
       this.permission = JSON.parse(sessionStorage.getItem('permission'));
       this.listQuery.pageNo = 1;
       this.getList();

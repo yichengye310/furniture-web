@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 import CODE from "@/utils/common"
-const url = 'https://www.yelangwhcm.com/admin-dibang-api'
+const url = 'http://120.79.99.73:8081'
 
 export function categoryLevelTwoListByPage() {
   return request({

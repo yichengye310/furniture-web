@@ -36,6 +36,7 @@
       }
     },
     created() {
+      // this.permission = JSON.parse(Cookies.get('permission'))
       this.permission = JSON.parse(sessionStorage.getItem('permission'))
     },
     mounted() {

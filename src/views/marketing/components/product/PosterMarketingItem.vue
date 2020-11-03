@@ -97,13 +97,15 @@ export default {
     }
   },
   created(){
-    this.permission=JSON.parse(Cookies.get("permission"));
+    // this.permission=JSON.parse(Cookies.get("permission"));
+    this.permission=JSON.parse(sessionStorage.getItem("permission"));
     this.productDetail=this.product;
     this.productList=[];
     this.productList.push(this.product.product);
   },
   mounted() {
-    this.permission=JSON.parse(Cookies.get("permission"));
+    // this.permission=JSON.parse(Cookies.get("permission"));
+    this.permission=JSON.parse(sessionStorage.getItem("permission"));
     this.productDetail=this.product;
     this.productList=[];
     this.productList.push(this.product.product);
